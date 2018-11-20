@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BoilerMeta</title>
+    <base href="/">
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof web3 !== 'undefined') {
+                web3js = new Web3(web3.currentProvider);
+                //web3js = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
+                window.web3js = web3js;
+
+            } else {
+                console.log('No web3? You should consider trying MetaMask!')
+            }
+        })
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <app-root></app-root>
+</body>
+
+</html>
